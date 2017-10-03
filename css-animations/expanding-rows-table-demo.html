@@ -1,0 +1,62 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<style>
+td {
+  vertical-align: text-top;
+}
+tr td div {
+  padding: 10px;
+  max-height: 1.4em;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+tr.active td div {
+  max-height: calc(1.4em * 15);
+  transition: max-height 0.5s ease-in;
+}
+</style>
+<table>
+  <tbody>
+    <tr>
+      <td><div>Row 1</div></td>
+      <td>
+        <div>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+        </div>
+      </td>
+      <td><div>...</div></td>
+    </tr>
+    <tr>
+      <td><div>Row 2</div></td>
+      <td>
+        <div>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+          <p>over and</p>
+          <p>again</p>
+        </div>
+      </td>
+      <td><div>...</div></td>
+    </tr>
+    <tr>
+      <td><div>Row 3</div></td>
+      <td><div>...</div></td>
+      <td><div>...</div></td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  $('tr').on('click', function() {
+    $(this).toggleClass('active');
+  });
+</script>
